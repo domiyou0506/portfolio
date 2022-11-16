@@ -14,6 +14,7 @@
     --color-gray: #3f3a3c;
     --color-yellow:#fff7d1;
     --color-orange: #fed546;
+    --color-deeppink: #eb1487;
 
 
     --font-large: 48px;
@@ -82,14 +83,24 @@ p{
     justify-content: space-between;
     align-items: center;
     padding: 16px;
-    /* background: var(--color-pink); */
-    background: -webkit-linear-gradient(right, var(--color-blue), var(--color-pink), gray, var(--color-beige));
+    background: var(--color-blue);
+    /* background: -webkit-linear-gradient(right, var(--color-blue), var(--color-pink), gray, var(--color-beige)); */
     /* background: -o-linear-gradient(right, var(--color-blue), var(--color-pink), gray, var(--color-beige));
     background: -ms-linear-gradient(right, var(--color-blue), var(--color-pink), gray, var(--color-beige));
     background: -moz-linear-gradient(right, var(--color-blue), var(--color-pink), gray, var(--color-beige));
     background: linear-gradient(right, var(--color-blue), var(--color-pink), gray, var(--color-beige)); */
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    transition: all var(--animation-duration) ease-in-out;
 }
 
+/*.navbar--bold 클래스는 존재하지 않는다. => 스크롤을 내리면 콘솔에서 자동적으로 생긴다.  */
+#navbar.navbar--bold{
+    background-color: var(--color-deeppink);
+    padding:18px;
+
+}
 
 .navbar__logo{
     font-size:var(--font-medium);
@@ -161,6 +172,10 @@ p{
 }
 
 
+
+
+
+
 /* 내소개 */
 .section{
     padding: 50px;
@@ -198,7 +213,7 @@ p{
     color:var(--color-blue);
     transform:rotate(-1800000deg) scale(1.5) ;
     width: 170px;
-    height: 260px;
+    height: 100px;
     line-height: 100px;
     font-size: 70px;
     margin:auto;    
@@ -242,6 +257,10 @@ p{
     width: 90px;
     height: 90;
 }
+
+
+
+
 
 
 /* 기술 */
@@ -513,8 +532,28 @@ p{
 }
 
 
+.arrow-up{
+    /* display: none; */
+    position:fixed;
+    bottom: 50px;
+    right: 50px;
+    width: 70px;
+    height: 70px;
+    font-size: 50px;
+    color: var(--color-pink);
+    background-color: var(--color-pink);
+    border-radius: 50%;
+    border: #ffffff;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 300ms ease-in;
 
+}
 
+.arrow-up.visible{
+    opacity: 1;
+    pointer-events:auto;
+}
 
 
 

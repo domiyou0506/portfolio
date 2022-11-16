@@ -11,23 +11,28 @@
     <!-- 아이콘 사이트 적용하기 위한 키트-->
     <script src="https://kit.fontawesome.com/479b0e7600.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
+    <script src="./script.js" defer></script>
 </head>
 <body>
     <!-- Navbar 시작 -->
     <nav id="navbar">
         <div class="navbar__logo">
             <!-- 아이콘 추가 -->
+            <!-- fa-solid fa-screwdriver-wrench는 클래스가 2개다  
+            fa-solid 
+            fa-screwdriver-wrench
+            -->
             <i class="fa-solid fa-screwdriver-wrench"></i>
             <a href="#">Developer DONGMIN-YOON</a>
         </div>
         <ul class="navbar__menu">
-            <li class="navbar__menu__item active">홈</li>
-            <li class="navbar__menu__item">나의 소개</li>
-            <li class="navbar__menu__item">기술</li>
-            <li class="navbar__menu__item">경력</li>
-            <li class="navbar__menu__item">프로젝트</li>
-            <li class="navbar__menu__item">추천서</li>
-            <li class="navbar__menu__item">contact</li>
+            <li class="navbar__menu__item active" data-link="#navber">홈</a> </li>
+            <li class="navbar__menu__item" data-link="#home">나의 소개</a></li>
+            <li class="navbar__menu__item" data-link="#about">기술</a></li>
+            <li class="navbar__menu__item" data-link="#skills">경력</a></li>
+            <li class="navbar__menu__item" data-link="#work">프로젝트</a></li>
+            <li class="navbar__menu__item" data-link="#testimonials">추천서</a></li>
+            <li class="navbar__menu__item" data-link="#contact">contact</a></li>
         </ul>
         <!-- 버튼시작 -->
         <botton class="navbar__toggle-btn">
@@ -42,7 +47,7 @@
             <img src="./images/그림6.png" alt="DONGMIN's photo" class="home__avatar">
             <h1 class="home__title">안녕하세요. 수원에 살고있는 윤동민입니다. </h1>
             <h2 class="home__description"> 현재 멋진 개발자가 되기 위해 웹개발을 공부하고 있습니다.</h2>
-            <botton class="home__contact">연락주세요!</botton>
+            <botton class="home__contact" data-link="#contact">연락주세요!</botton>
         </div>
     </section>
     <!-- home끝 -->
@@ -197,84 +202,84 @@
             <h1>내 작업실</h1>
             <h3>프로젝트</h3>
             <div class="work__categories">
-                <button class="category__btn">
+                <button class="category__btn selected" data-filter="*">
                     전체 <span class="category__count">10</span>
                 </button>
-                <button class="category__btn">
+                <button class="category__btn" data-filter="front-end">
                     프론트엔드 <span class="category__count">5</span>
                 </button>
-                <button class="category__btn">
+                <button class="category__btn" data-filter="back-end">
                     백엔드 <span class="category__count">3</span>
                 </button>
-                <button class="category__btn">
+                <button class="category__btn" data-filter="mobile">
                     모바일 <span class="category__count">2</span>
                 </button>
             </div>
             <div class="work__projects">
-                <a href="#" class="project" target="_blank">
+                <a href="#" class="project" target="_blank" data-filter="mobile">
                     <img src="./images/유튜브.png" alt="" class="project__img">
                     <div class="project__description">
                         <h3>유튜브 클론코딩</h3>
                         <span>클론코딩 아주 똑같음</span>
                     </div>
                 </a>
-                <a href="#" class="project" target="_blank">
+                <a href="#" class="project" target="_blank" data-type="front-end">
                     <img src="./images/유튜브.png" alt="" class="project__img">
                     <div class="project__description">
                         <h3>에어비엔비 클론코딩</h3>
                         <span>클론코딩 아주 똑같음</span>
                     </div>
                 </a>
-                <a href="#" class="project" target="_blank">
+                <a href="#" class="project" target="_blank" data-type="front-end">
                     <img src="./images/유튜브.png" alt="" class="project__img">
                     <div class="project__description">
                         <h3>제주항공 클론코딩</h3>
                         <span>클론코딩 아주 똑같음</span>
                     </div>
                 </a>
-                <a href="#" class="project" target="_blank">
+                <a href="#" class="project" target="_blank" data-type="front-end">
                     <img src="./images/유튜브.png" alt="" class="project__img">
                     <div class="project__description">
                         <h3>진에어 클론코딩</h3>
                         <span>클론코딩 아주 똑같음</span>
                     </div>
                 </a>
-                <a href="#" class="project" target="_blank">
+                <a href="#" class="project" target="_blank" data-type="front-end">
                     <img src="./images/유튜브.png" alt="" class="project__img">
                     <div class="project__description">
                         <h3>배달의 민족 클론코딩</h3>
                         <span>클론코딩 아주 똑같음</span>
                     </div>
                 </a>
-                <a href="#" class="project" target="_blank">
+                <a href="#" class="project" target="_blank" data-type="back-end">
                     <img src="./images/유튜브.png" alt="" class="project__img">
                     <div class="project__description">
                         <h3>CGV 클론코딩</h3>
                         <span>클론코딩 아주 똑같음</span>
                     </div>
                 </a>
-                <a href="#" class="project" target="_blank">
+                <a href="#" class="project" target="_blank" data-type="back-end">
                     <img src="./images/유튜브.png" alt="" class="project__img">
                     <div class="project__description">
                         <h3>마켓컬리 클론코딩</h3>
                         <span>클론코딩 아주 똑같음</span>
                     </div>
                 </a>
-                <a href="#" class="project" target="_blank">
+                <a href="#" class="project" target="_blank" data-type="back-end">
                     <img src="./images/유튜브.png" alt="" class="project__img">
                     <div class="project__description">
                         <h3>트리플 클론코딩</h3>
                         <span>클론코딩 아주 똑같음</span>
                     </div>
                 </a>
-                <a href="#" class="project" target="_blank">
+                <a href="#" class="project" target="_blank" data-type="front-end">
                     <img src="./images/유튜브.png" alt="" class="project__img">
                     <div class="project__description">
                         <h3>여기어때 클론코딩</h3>
                         <span>클론코딩 아주 똑같음</span>
                     </div>
                 </a>
-                <a href="#" class="project" target="_blank">
+                <a href="#" class="project" target="_blank" data-filter="mobile">
                     <img src="./images/유튜브.png" alt="" class="project__img">
                     <div class="project__description">
                         <h3>야놀자 클론코딩</h3>
@@ -308,7 +313,7 @@
                     <div class="testimonial__speech-bubble">
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Et tempore similique incidunt voluptate ab eum vero, nisi deserunt quo error, repellat nam, facere voluptates blanditiis necessitatibus! Ullam enim ut laborum.
-                            <p class="name"><a href="">빌게이츠</a>/ mssoft</p>
+                            <p class="name"><a href="">KFC</a>/ mssoft</p>
                         </p>
                     </div>
                 </div>
@@ -333,9 +338,10 @@
             Copyrightⓒ 2022 dongmin all right reserved
         </p>
     </section>
-        <button>
-        <i class="fa-solid fa-arrow-up"></i>
-        </button>
         <!-- Contact 끝-->
+
+        <button class="arrow-up">
+            <a class="fa-solid fa-arrow-up"> </a>
+        </button>
     </body>
 </html>
